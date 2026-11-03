@@ -1,0 +1,26 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.lib.json",
+        "compiler": "swc"
+      }
+    }
+  },
+  "compilerOptions": {
+    "assets": [
+      {
+        "include": "i18n/**/*",
+        "outDir": "dist/src",
+        "watchAssets": true
+      }
+    ],
+    "compiler": "swc"
+  }
+}
